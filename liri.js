@@ -111,15 +111,17 @@ fs.readFile("random.txt", "utf8", function(error, data) {
     return console.log(error);
   }
 
-  console.log(data)
-
-
-  });  
+  console.log(data);
+  var dataArr = data.split(",");
+  requestType = dataArr[0];
+  artists = dataArr[1];
+});  
 
 })}
 var command = process.argv[2];
 var param   = process.argv[3];
 
+function switchcase(){
 switch (command) {
   case 'concert-this':
     concertThis(param);
@@ -134,8 +136,8 @@ switch (command) {
     dowhatitSays(param);
     break;
 }
-
-
+}
+switchcase();
 
 
 
