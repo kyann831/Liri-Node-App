@@ -84,7 +84,7 @@ console.log(queryUrl);
 
 axios.get(queryUrl).then(
   function(response) {
-    console.log("Release Year: " + response.data.Title);
+    console.log("Movie Name: " + response.data.Title);
     console.log("Release Year: " + response.data.Year);
     console.log("Actors: " + response.data.Actors);
     console.log("Plot: " + response.data.Plot);
